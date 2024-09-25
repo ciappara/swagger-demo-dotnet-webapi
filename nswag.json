@@ -1,0 +1,21 @@
+{
+  "codeGenerators": {
+    "openApiToTypeScriptClient": {
+      "className": "ApiClient",
+      "moduleName": "",
+      "template": "Angular",
+      "rxjsVersion": 7, // Use RxJS 6+ for Observable generation
+      "useRxJS": true, // Enable RxJS instead of Promises
+      //"output": "Client.ts",
+      "generateClientClasses": true,
+      "generateClientInterfaces": false,
+      "generateDtoTypes": true,
+      "typeScriptGeneratorSettings": {
+        "template": "Axios",
+        "typeStyle": "Interface",
+        "generateOptionalProperties": true,
+        "importRequiredTypes": true
+      }
+    }
+  }
+}
