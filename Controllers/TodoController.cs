@@ -18,7 +18,6 @@ namespace WebApiWithSwaggerDemo.Controllers
 
 
         // GET: api/todo
-        //[HttpGet]
         [HttpGet(Name = "GetAllTasks")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<TodoTask>))]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
@@ -35,7 +34,6 @@ namespace WebApiWithSwaggerDemo.Controllers
 
 
         // GET: api/todo/{id}
-        //[HttpGet("{id}")]
         [HttpGet("{id}", Name = "GetTaskById")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(TodoTask))]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -51,7 +49,6 @@ namespace WebApiWithSwaggerDemo.Controllers
 
 
         // POST: api/todo
-        //[HttpPost]
         [HttpPost(Name = "CreateTask")]
         [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(TodoTask))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -70,7 +67,6 @@ namespace WebApiWithSwaggerDemo.Controllers
 
 
         // PUT: api/todo/{id}/complete
-        //[HttpPut("{id}/complete")]
         [HttpPut("{id}/complete", Name = "CompleteTask")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(TodoTask))]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -85,7 +81,6 @@ namespace WebApiWithSwaggerDemo.Controllers
         }
 
         // DELETE: api/todo/{id}
-        //[HttpDelete("{id}")]
         [HttpDelete("{id}", Name = "DeleteTask")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]

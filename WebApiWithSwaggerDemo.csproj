@@ -26,6 +26,7 @@
 
 	<Target Name="GenerateTypeScriptClient" AfterTargets="Build">
 		<Exec Command="swagger tofile --output api.yaml $(OutputPath)WebApiWithSwaggerDemo.dll v1" />
+		
 		<Exec Command="nswag openapi2tsclient /input:api.yaml /output:../angular-swagger-demo/src/api/api-client.ts /template:Angular /RxJsVersion:7.8 /InjectionTokenType:InjectionToken /typeStyle:Interface" />
 	</Target>
 
